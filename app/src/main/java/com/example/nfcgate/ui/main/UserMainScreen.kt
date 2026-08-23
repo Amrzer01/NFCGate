@@ -24,7 +24,10 @@ fun UserMainScreen(onStartSession: () -> Unit, onLogout: () -> Unit) {
             NavigationBar(
                 containerColor = SurfaceColor,
                 contentColor = PrimaryColor,
-                tonalElevation = 8.dp
+                tonalElevation = 0.dp,
+                modifier = Modifier
+                    .padding(horizontal = 12.dp)
+                    .navigationBarsPadding()
             ) {
                 items.forEachIndexed { index, item ->
                     NavigationBarItem(
