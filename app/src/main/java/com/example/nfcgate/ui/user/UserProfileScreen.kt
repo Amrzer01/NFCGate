@@ -2,7 +2,9 @@ package com.example.nfcgate.ui.user
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.CircleShape
+import androidx.compose.foundation.verticalScroll
 import compose.icons.FeatherIcons
 import compose.icons.feathericons.*
 import androidx.compose.material3.*
@@ -22,6 +24,8 @@ fun UserProfileScreen() {
         modifier = Modifier
             .fillMaxSize()
             .background(BackgroundColor)
+            .statusBarsPadding()
+            .verticalScroll(rememberScrollState())
             .padding(horizontal = 20.dp)
     ) {
         Spacer(modifier = Modifier.height(24.dp))

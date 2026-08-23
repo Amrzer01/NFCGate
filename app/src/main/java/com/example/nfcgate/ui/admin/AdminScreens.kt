@@ -216,6 +216,7 @@ fun AdminUsersScreen() {
         modifier = Modifier
             .fillMaxSize()
             .background(BackgroundColor)
+            .statusBarsPadding()
             .padding(horizontal = 20.dp)
     ) {
         Spacer(modifier = Modifier.height(24.dp))

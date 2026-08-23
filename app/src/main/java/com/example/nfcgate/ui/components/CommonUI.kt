@@ -52,8 +52,8 @@ fun AppCard(
         ) else cardModifier,
         shape = shape,
         color = containerColor,
-        border = BorderStroke(1.dp, OutlineColor),
-        shadowElevation = 0.dp
+        border = BorderStroke(1.dp, OutlineColor.copy(alpha = 0.78f)),
+        shadowElevation = 2.dp
     ) {
         Column(modifier = Modifier.padding(padding), content = content)
     }
@@ -84,7 +84,7 @@ fun PrimaryButton(
             contentColor = Color.White,
             disabledContainerColor = PrimaryColor.copy(alpha = 0.5f)
         ),
-        elevation = ButtonDefaults.buttonElevation(defaultElevation = 0.dp, pressedElevation = 0.dp),
+        elevation = ButtonDefaults.buttonElevation(defaultElevation = 1.dp, pressedElevation = 0.dp),
         enabled = enabled && !isLoading,
         interactionSource = interactionSource
     ) {

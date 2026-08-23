@@ -24,7 +24,6 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.nfcgate.theme.*
 import com.example.nfcgate.ui.components.HeartbeatEcgLine
-import com.example.nfcgate.ui.components.HeartbeatEcgLine
 import com.example.nfcgate.ui.components.PrimaryButton
 import com.example.nfcgate.ui.components.IconBadge
 
@@ -178,6 +177,7 @@ fun ActiveSessionScreen(onEndSession: () -> Unit) {
         modifier = Modifier
             .fillMaxSize()
             .background(BackgroundColor)
+            .verticalScroll(rememberScrollState())
             .padding(horizontal = 20.dp),
         horizontalAlignment = Alignment.CenterHorizontally
     ) {

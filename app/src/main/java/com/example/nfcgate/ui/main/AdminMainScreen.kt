@@ -35,7 +35,10 @@ fun AdminMainScreen(onLogout: () -> Unit) {
             NavigationBar(
                 containerColor = SurfaceColor,
                 contentColor = PrimaryColor,
-                tonalElevation = 0.dp
+                tonalElevation = 0.dp,
+                modifier = Modifier
+                    .padding(horizontal = 12.dp)
+                    .navigationBarsPadding()
             ) {
                 items.forEachIndexed { index, item ->
                     val isSelected = selectedItem == index

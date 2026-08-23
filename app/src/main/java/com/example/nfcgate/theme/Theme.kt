@@ -32,19 +32,19 @@ private val LightColorScheme = lightColorScheme(
 )
 
 private val DarkColorScheme = darkColorScheme(
-    primary = PrimaryColor,
+    primary = Color(0xFFA8A1FF),
     onPrimary = BackgroundColor,
-    primaryContainer = PrimaryColor,
+    primaryContainer = Color(0xFF373083),
     onPrimaryContainer = BackgroundColor,
-    secondary = PrimaryColor,
+    secondary = Color(0xFFA8A1FF),
     onSecondary = BackgroundColor,
-    background = TextPrimary, // Inverting for simplicity, normally a dark theme has specific dark colors
+    background = Color(0xFF10131A),
     onBackground = BackgroundColor,
-    surface = TextPrimary,
+    surface = Color(0xFF171B24),
     onSurface = BackgroundColor,
-    surfaceVariant = SurfaceVariantColor,
-    onSurfaceVariant = TextHint,
-    outline = OutlineColor,
+    surfaceVariant = Color(0xFF232936),
+    onSurfaceVariant = Color(0xFFB8C0CE),
+    outline = Color(0xFF343C4C),
     error = ErrorColor,
     onError = BackgroundColor
 )
