@@ -1,0 +1,77 @@
+Created At: 2026-08-23T06:17:26+03:00
+Completed At: 2026-08-23T06:17:26+03:00
+
+				The command completed successfully.
+				Output:
+				<USER_REQUEST>
+Take this Jetpack Compose app from "clean UI mockup" to "production-grade, 
+million-user app" quality. This is a deeper pass than visual styling — 
+it covers states, motion, accessibility, performance, and edge cases 
+that separate a demo from a real product. Work through each section 
+below, one at a time, showing me a diff before moving to the next. 
+Do not remove existing features; only add robustness and polish.
+
+═══════════════════════════════════
+1. LOADING, EMPTY, AND ERROR STATES
+═══════════════════════════════════
+Every screen that shows a list or async data (Users, Devices, Sessions, 
+Recent Activity, Dashboard stats) currently assumes data is always 
+present. Add all three states for each:
+
+- LOADING: Use Compose `shimmer`-style placeholder cards (gray 
+  SurfaceVariantColor blocks in the shape of the real content) instead 
+  of a blank screen or a single spinner. If a shimmer library isn't 
+  available, use a simple pulsing alpha animation on placeholder shapes.
+- EMPTY: A centered illustration/icon-in-a-large-IconBadge + a short 
+  headline + one sentence of guidance + (if relevant) a PrimaryButton 
+  to fix it. Example: Devices list empty → "No devices yet" / "Add your 
+  first device to start relaying NFC sessions" / "Add Device" button.
+- ERROR: A centered icon (ErrorTint badge with an alert icon) + short 
+  message + a "Retry" OutlineButton. Never show a raw exception message 
+  to the user.
+
+Wrap each screen's content in a sealed state (Loading/Empty/Error/Success) 
+if one doesn't already exist, and render the correct UI for each. Use 
+`when` — do not silently fall through to showing stale/hardcoded data.
+
+═══════════════════════════════════
+2. MICRO-INTERACTIONS AND MOTION
+════════════════════════════════
+<truncated 6371 bytes>
+nally) until required fields 
+  are valid, using ButtonDefaults disabled colors already defined.
+- Add a loading spinner inside PrimaryButton (replacing the text 
+  temporarily) during simulated network calls like Sign In, so the 
+  button doesn't feel unresponsive on tap.
+
+═══════════════════════════════════
+10. CONSISTENCY AUDIT (final pass)
+═══════════════════════════════════
+After all of the above, do one more full pass across every screen and 
+confirm: same corner radii, same spacing, same animation durations, 
+same haptic patterns, same empty/error state layout structure reused 
+everywhere (not reinvented per screen). Flag anything still inconsistent.
+
+═══════════════════════════════════
+RULES
+═══════════════════════════════════
+- Do not fabricate backend/network calls — where "real" data would come 
+  from an API, use clearly marked TODO stubs with realistic delay/error 
+  simulation so the states above can still be demonstrated.
+- Do not change ViewModels' public contracts unless required to support 
+  a new UI state (Loading/Empty/Error) — if you must change one, show 
+  me the change explicitly and explain why.
+- After each numbered section, pause and wait for me to say "continue."
+
+═══════════════════════════════════
+FINAL OUTPUT
+═══════════════════════════════════
+End with a "PRODUCTION READINESS CHECKLIST" — a table of all 10 
+categories above, marked ✅ Done / ⚠️ Partially done / ❌ Not applicable 
+to this app, so I know exactly what's left before a real release.
+</USER_REQUEST>
+<ADDITIONAL_METADATA>
+The current local time is: 2026-08-23T06:05:23+03:00.
+</ADDITIONAL_METADATA>
+
+
